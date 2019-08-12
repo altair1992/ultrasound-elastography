@@ -7,4 +7,4 @@
  https://doi.org/10.1007/s13534-017-0052-1
  
  # Usage
-RPSE.m   --> Demo code 
+Demo code: RPSE.m  
