@@ -43,7 +43,7 @@ clc,clear,close all
 
 % Select data set
 image_save = 0;                % image save for velocity and strain (1: save, otherwise: no)
-scan_mode = 'linear';          % Array type 'linear', 'curve' 'virtual'
+scan_mode = 'virtual';          % Array type 'curve' 'virtual'
 
 inc_f = 1;                      % frame increment (1 -> 0.1%, 2 -> 0.2%)
 % Average kernel size for Velocity estimation
@@ -80,15 +80,6 @@ end
 %
             
 switch (scan_mode)
-    case 'linear'
-        load('rec_data.mat')
-        fs = 20e6;                          % Sampling frequency
-        h = waitbar(0,'Please wait.');      % Wait bar
-        frames = size(rf_data_set,3);
-        % Coordinates for CNRe for Data Set 2
-        pos_target = [300, 45];
-        %pos_back = [900, 15];              % west side
-        pos_back = [50, 45];                % north side
     case 'curve'
         load('rec_data_sonon_g.mat')          % Gelatin phantom
         %load('rec_data_sonon.mat')         % Silicon phantom
